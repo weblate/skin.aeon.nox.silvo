@@ -435,7 +435,7 @@
 	<include name="ExtendedInfoMovieLists">
 		<include content="ExtendedInfoListLayout">
 			<param name="id">90011</param>
-			<param name="content">plugin://script.skin.info.service/?action=similar&amp;dbid=$INFO[ListItem.DBID]&amp;dbtype=$INFO[ListItem.DBType]&amp;limit=200</param>
+			<param name="content">plugin://script.skin.info.service/?action=similar&amp;dbid=$INFO[ListItem.DBID]&amp;dbtype=$INFO[ListItem.DBType]&amp;limit=40</param>
 			<param name="limit">40</param>
 		</include>
 		<include content="ExtendedInfoListLayout">
