@@ -263,7 +263,7 @@
 				<left>1172</left>
 				<top>176</top>
 				<visible>!String.IsEqual(ListItem.Label,$LOCALIZE[19335]) + !String.IsEqual(ListItem.Label,$LOCALIZE[19336])</visible>
-				<include>VisibleFadeAnimation</include>
+				<animation effect="fade" time="250">Visible</animation>
 				<include content="PVRInfoDefaultDetails">
 					<param name="plottop">207</param>
 					<param name="plotheight">637</param>
