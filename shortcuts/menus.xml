@@ -85,7 +85,7 @@
 			<action>ActivateWindow(shutdownmenu)</action>
 			<icon>special://skin/extras/icons/power.png</icon>
 		</item>
-		<item name="favourites">
+		<item name="favourites" submenu="favourites">
 			<label>$LOCALIZE[1036]</label>
 			<action>ActivateWindow(FavouritesBrowser)</action>
 			<icon>special://skin/extras/icons/Favorites.png</icon>
@@ -103,6 +103,33 @@
 			<icon>special://skin/extras/icons/DefaultMusicVideos.png</icon>
 		</item>
 	</menu>
+	<!-- Music Submenu -->
+	<submenu name="music" standalone="false" icons="false">
+		<item name="music-artists">
+			<label>$LOCALIZE[133]</label>
+			<action>ActivateWindow(Music,musicdb://artists/,return)</action>
+		</item>
+		<item name="music-albums">
+			<label>$LOCALIZE[132]</label>
+			<action>ActivateWindow(Music,musicdb://albums/,return)</action>
+		</item>
+		<item name="music-songs">
+			<label>$LOCALIZE[134]</label>
+			<action>ActivateWindow(Music,musicdb://songs/,return)</action>
+		</item>
+		<item name="music-files">
+			<label>$LOCALIZE[744]</label>
+			<action>ActivateWindow(Music,sources://music/,return)</action>
+		</item>
+		<item name="music-addons">
+			<label>$LOCALIZE[24001]</label>
+			<action>ActivateWindow(Music,addons://sources/audio/,return)</action>
+		</item>
+		<item name="music-library">
+			<label>$LOCALIZE[14022]</label>
+			<action>ActivateWindow(Music,musicdb://)</action>
+		</item>
+	</submenu>
 	<!-- Movies Submenu -->
 	<submenu name="movies" standalone="false" icons="false">
 		<item name="movies-unwatched">
@@ -161,54 +188,27 @@
 			<action>ActivateWindow(Videos,videodb://tvshows/actors/,return)</action>
 		</item>
 	</submenu>
-	<!-- Music Submenu -->
-	<submenu name="music" standalone="false" icons="false">
-		<item name="music-artists">
-			<label>$LOCALIZE[133]</label>
-			<action>ActivateWindow(Music,musicdb://artists/,return)</action>
+	<!-- Live TV Submenu -->
+	<submenu name="livetv" standalone="false" icons="false">
+		<item name="livetv-radio">
+			<label>$LOCALIZE[19024]</label>
+			<action>ActivateWindow(RadioChannels)</action>
 		</item>
-		<item name="music-albums">
-			<label>$LOCALIZE[132]</label>
-			<action>ActivateWindow(Music,musicdb://albums/,return)</action>
+		<item name="livetv-channels">
+			<label>$LOCALIZE[19023]</label>
+			<action>ActivateWindow(TVChannels)</action>
 		</item>
-		<item name="music-songs">
-			<label>$LOCALIZE[134]</label>
-			<action>ActivateWindow(Music,musicdb://songs/,return)</action>
+		<item name="livetv-guide">
+			<label>$LOCALIZE[19069]</label>
+			<action>ActivateWindow(TVGuide)</action>
 		</item>
-		<item name="music-files">
-			<label>$LOCALIZE[744]</label>
-			<action>ActivateWindow(Music,sources://music/,return)</action>
+		<item name="livetv-recordings">
+			<label>$LOCALIZE[19163]</label>
+			<action>ActivateWindow(TVRecordings)</action>
 		</item>
-		<item name="music-addons">
-			<label>$LOCALIZE[24001]</label>
-			<action>ActivateWindow(Music,addons://sources/audio/,return)</action>
-		</item>
-		<item name="music-library">
-			<label>$LOCALIZE[14022]</label>
-			<action>ActivateWindow(Music,musicdb://)</action>
-		</item>
-	</submenu>
-	<!-- Music Videos Submenu -->
-	<submenu name="musicvideos" standalone="false" icons="false">
-		<item name="musicvideos-artists">
-			<label>$LOCALIZE[133]</label>
-			<action>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</action>
-		</item>
-		<item name="musicvideos-genres">
-			<label>$LOCALIZE[135]</label>
-			<action>ActivateWindow(Videos,videodb://musicvideos/genres,return)</action>
-		</item>
-		<item name="musicvideos-recent">
-			<label>$LOCALIZE[31328]</label>
-			<action>ActivateWindow(Videos,videodb://recentlyaddedmusicvideos/,return)</action>
-		</item>
-		<item name="musicvideos-years">
-			<label>$LOCALIZE[652]</label>
-			<action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
-		</item>
-		<item name="musicvideos-tags">
-			<label>$LOCALIZE[20459]</label>
-			<action>ActivateWindow(Videos,videodb://musicvideos/tags/,return)</action>
+		<item name="livetv-timers">
+			<label>$LOCALIZE[19040]</label>
+			<action>ActivateWindow(TVTimers)</action>
 		</item>
 	</submenu>
 	<!-- Videos Submenu -->
@@ -236,29 +236,6 @@
 		<item name="videos-library">
 			<label>$LOCALIZE[14022]</label>
 			<action>ActivateWindow(Videos,Root)</action>
-		</item>
-	</submenu>
-	<!-- Live TV Submenu -->
-	<submenu name="livetv" standalone="false" icons="false">
-		<item name="livetv-radio">
-			<label>$LOCALIZE[19024]</label>
-			<action>ActivateWindow(RadioChannels)</action>
-		</item>
-		<item name="livetv-channels">
-			<label>$LOCALIZE[19023]</label>
-			<action>ActivateWindow(TVChannels)</action>
-		</item>
-		<item name="livetv-guide">
-			<label>$LOCALIZE[19069]</label>
-			<action>ActivateWindow(TVGuide)</action>
-		</item>
-		<item name="livetv-recordings">
-			<label>$LOCALIZE[19163]</label>
-			<action>ActivateWindow(TVRecordings)</action>
-		</item>
-		<item name="livetv-timers">
-			<label>$LOCALIZE[19040]</label>
-			<action>ActivateWindow(TVTimers)</action>
 		</item>
 	</submenu>
 	<!-- Programs Submenu -->
@@ -348,8 +325,34 @@
 			<action>Quit()</action>
 		</item>
 	</submenu>
+	<!-- Favourites Submenu -->
+	<submenu name="favourites" standalone="false" icons="false">
+	</submenu>
 	<!-- Weather Submenu -->
 	<submenu name="weather" standalone="false" icons="false">
+	</submenu>
+	<!-- Music Videos Submenu -->
+	<submenu name="musicvideos" standalone="false" icons="false">
+		<item name="musicvideos-artists">
+			<label>$LOCALIZE[133]</label>
+			<action>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</action>
+		</item>
+		<item name="musicvideos-genres">
+			<label>$LOCALIZE[135]</label>
+			<action>ActivateWindow(Videos,videodb://musicvideos/genres,return)</action>
+		</item>
+		<item name="musicvideos-recent">
+			<label>$LOCALIZE[31328]</label>
+			<action>ActivateWindow(Videos,videodb://recentlyaddedmusicvideos/,return)</action>
+		</item>
+		<item name="musicvideos-years">
+			<label>$LOCALIZE[652]</label>
+			<action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
+		</item>
+		<item name="musicvideos-tags">
+			<label>$LOCALIZE[20459]</label>
+			<action>ActivateWindow(Videos,videodb://musicvideos/tags/,return)</action>
+		</item>
 	</submenu>
 	<!-- Button Menu -->
 	<menu name="buttonmenu" controltype="button">

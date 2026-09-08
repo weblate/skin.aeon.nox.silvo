@@ -62,7 +62,7 @@
 				<widget name="seasonal-startrek" label="$ADDON[script.skin.info.service 32647]" icon="logos/skininfo-logo.png" type="movies" target="videos" source="addon" visible="Library.HasContent(movies)">
 					<path>plugin://script.skin.info.service/?action=seasonal&amp;season=startrek&amp;reload=$INFO[Window(Home).Property(SkinInfo.Library.Refreshed)]</path>
 				</widget>
-</group>
+			</group>
 			<group name="movies-discover" label="$ADDON[script.skin.info.service 32619]" icon="logos/skininfo-logo.png">
 				<widget name="sis-tmdb-trending-movies" label="$ADDON[script.skin.info.service 32627]" icon="logos/tmdb-logo.png" type="movies" target="videos" source="addon">
 					<path>plugin://script.skin.info.service/?action=tmdb_trending&amp;type=movie</path>

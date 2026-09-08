@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-	<includes>
-		<!-- Widget Style Options -->
-		<include name="StyleOptions">
+	<!-- PROPERTY DEFINITIONS -->
+	<!-- Widget -->
+	<property name="widget" type="widget" templateonly="true" />
+	<property name="widgetTarget" templateonly="true" />
+	<property name="widgetSource" templateonly="true" />
+	<!-- Widget Style -->
+	<property name="widgetStyle" requires="widgetPath">
+		<options>
 			<option value="List" label="$LOCALIZE[535]" />
 			<option value="Extended List" label="$LOCALIZE[31711]" />
 			<option value="Panel" label="$LOCALIZE[31712]" />
 			<option value="Extended Panel" label="$LOCALIZE[31713]" />
 			<option value="Compact Panel" label="$LOCALIZE[31714]" />
 			<option value="Extended Compact Panel" label="$LOCALIZE[31715]" />
-		</include>
-		<!-- Widget Back Options -->
-		<include name="BackOptions">
+		</options>
+	</property>
+	<!-- Widget Back -->
+	<property name="widgetBack" templateonly="true" requires="widgetStyle">
+		<options>
 			<option value="Default" label="$LOCALIZE[571]" />
 			<option value="Flat" label="$LOCALIZE[31723]" />
 			<option value="Clear" label="$LOCALIZE[31542]" />
@@ -21,15 +28,19 @@
 			<option value="Colored Clear" label="$LOCALIZE[31727]" />
 			<option value="Colored Clear White" label="$LOCALIZE[31728]" />
 			<option value="None" label="$LOCALIZE[231]" />
-		</include>
-		<!-- Widget Title Options -->
-		<include name="TitleOptions">
+		</options>
+	</property>
+	<!-- Widget Title -->
+	<property name="widgetTitle" templateonly="true" requires="widgetStyle">
+		<options>
 			<option value="Panel" label="$LOCALIZE[31729]" />
 			<option value="On Focus" label="$LOCALIZE[31730]" />
 			<option value="Title" label="$LOCALIZE[31731]" />
-		</include>
-		<!-- Widget Art Options (with conditions) -->
-		<include name="ArtOptions">
+		</options>
+	</property>
+	<!-- Widget Art -->
+	<property name="widgetArt" templateonly="true" requires="widgetStyle">
+		<options>
 			<option value="Poster" label="$LOCALIZE[31016]" condition="![widgetType=weather | system | artists | albums | songs]" />
 			<option value="Square Poster" label="$LOCALIZE[31718]" />
 			<option value="FanArt" label="$LOCALIZE[20445]" condition="!widgetType=weather" />
@@ -40,9 +51,11 @@
 			<option value="DiscArt" label="$LOCALIZE[31609]" condition="[widgetSource=library | playlist | addon] + widgetType=movies + !widgetType=episodes + !widgetType=tvshows" />
 			<option value="CharacterArt" label="$LOCALIZE[31720]" condition="widgetType=episodes + [widgetSource=library | playlist | addon]" />
 			<option value="Banner" label="$LOCALIZE[31087]" condition="[widgetSource=library | playlist | addon] + [widgetType=movies | episodes | tvshows | mixed]" />
-		</include>
-		<!-- Widget Case Options (with icon variants) -->
-		<include name="CaseOptions">
+		</options>
+	</property>
+	<!-- Widget Case -->
+	<property name="widgetCase" requires="widgetStyle">
+		<options>
 			<option value="Glass" label="$LOCALIZE[31721]">
 				<icon condition="widgetArt=Poster">homewidgets/cases/glass/portrait.png</icon>
 				<icon condition="widgetArt=Square Poster|ClearLogo|DiscArt|Character Art">homewidgets/cases/glass/square.png</icon>
@@ -61,9 +74,11 @@
 				<icon condition="widgetArt=Banner">homewidgets/cases/clearcase/banner/1080p.png</icon>
 				<icon>homewidgets/cases/clearcase/landscape/1080p.png</icon>
 			</option>
-		</include>
-		<!-- Widget Limit Options -->
-		<include name="LimitOptions">
+		</options>
+	</property>
+	<!-- Widget Limit -->
+	<property name="widgetLimit" templateonly="true" requires="widgetStyle">
+		<options>
 			<option value="$NUMBER[7]" label="$NUMBER[7]" />
 			<option value="$NUMBER[9]" label="$NUMBER[9]" />
 			<option value="$NUMBER[15]" label="$NUMBER[15]" />
@@ -71,102 +86,44 @@
 			<option value="$NUMBER[50]" label="$NUMBER[50]" />
 			<option value="$NUMBER[75]" label="$NUMBER[75]" />
 			<option value="$NUMBER[100]" label="$NUMBER[100]" />
-		</include>
-		<!-- Widget Sort By Options (with conditions) -->
-		<include name="SortbyOptions">
+		</options>
+	</property>
+	<!-- Widget Sort By -->
+	<property name="widgetSortby" templateonly="true" requires="widgetStyle">
+		<options>
 			<option value="lastplayed" label="$LOCALIZE[568]" />
 			<option value="title" label="$LOCALIZE[369]" />
 			<option value="name" label="$LOCALIZE[551]" />
 			<option value="playlistorder" label="$LOCALIZE[559]" />
 			<option value="tvshowtitle" label="$LOCALIZE[36902]" condition="widgetType=episodes" />
 			<option value="episodenumber" label="$LOCALIZE[20359]" condition="widgetType=episodes" />
-			<option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes|pvr" />
-			<option value="artist" label="$LOCALIZE[557]" condition="widgetType=musicvideos|artists|albums|songs" />
-			<option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos|albums|songs" />
+			<option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes | pvr" />
+			<option value="artist" label="$LOCALIZE[557]" condition="widgetType=musicvideos | artists | albums | songs" />
+			<option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos | albums | songs" />
 			<option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
 			<option value="channelnumber" label="$LOCALIZE[19029]" condition="widgetType=pvr" />
-			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies|tvshows|musicvideos|albums" />
+			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies | tvshows | musicvideos | albums" />
 			<option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType=pvr" />
 			<option value="random" label="$LOCALIZE[590]" />
 			<option value="lastused" label="$LOCALIZE[12012]" />
 			<option value="lastupdated" label="$LOCALIZE[12014]" />
 			<option value="playcount" label="$LOCALIZE[567]" />
 			<option value="year" label="$LOCALIZE[562]" />
-			<option value="season" label="$LOCALIZE[20373]" condition="widgetType=tvshows|episodes" />
-		</include>
-		<!-- Widget Sort Order Options -->
-		<include name="SortOptions">
-			<option value="ascending" label="$LOCALIZE[584]" />
-			<option value="descending" label="$LOCALIZE[585]" />
-		</include>
-		<!-- Widget List Options -->
-		<include name="ListOptions">
-			<option value="Label" label="$LOCALIZE[21899]" />
-			<option value="Banner Art" label="$LOCALIZE[31087]" />
-		</include>
-		<!-- Widget Art Fallback Rules -->
-		<include name="ArtFallbackRules">
-			<when condition="widgetType=musicvideos | songs | albums | artists | favourite | addon | weather | system | custom | pvr">Square Poster</when>
-			<default>Poster</default>
-		</include>
-	</includes>
-	<!-- PROPERTY DEFINITIONS -->
-	<!-- Widget -->
-	<property name="widget" type="widget" templateonly="true" />
-	<property name="widgetTarget" templateonly="true" />
-	<property name="widgetSource" templateonly="true" />
-	<!-- Widget Style -->
-	<property name="widgetStyle" requires="widgetPath">
-		<options>
-			<include content="StyleOptions" />
-		</options>
-	</property>
-	<!-- Widget Back -->
-	<property name="widgetBack" templateonly="true" requires="widgetStyle">
-		<options>
-			<include content="BackOptions" />
-		</options>
-	</property>
-	<!-- Widget Title -->
-	<property name="widgetTitle" templateonly="true" requires="widgetStyle">
-		<options>
-			<include content="TitleOptions" />
-		</options>
-	</property>
-	<!-- Widget Art -->
-	<property name="widgetArt" templateonly="true" requires="widgetStyle">
-		<options>
-			<include content="ArtOptions" />
-		</options>
-	</property>
-	<!-- Widget Case -->
-	<property name="widgetCase" requires="widgetStyle">
-		<options>
-			<include content="CaseOptions" />
-		</options>
-	</property>
-	<!-- Widget Limit -->
-	<property name="widgetLimit" templateonly="true" requires="widgetStyle">
-		<options>
-			<include content="LimitOptions" />
-		</options>
-	</property>
-	<!-- Widget Sort By -->
-	<property name="widgetSortby" templateonly="true" requires="widgetStyle">
-		<options>
-			<include content="SortbyOptions" />
+			<option value="season" label="$LOCALIZE[20373]" condition="widgetType=tvshows | episodes" />
 		</options>
 	</property>
 	<!-- Widget Sort Order -->
 	<property name="widgetSort" templateonly="true" requires="widgetStyle">
 		<options>
-			<include content="SortOptions" />
+			<option value="ascending" label="$LOCALIZE[584]" />
+			<option value="descending" label="$LOCALIZE[585]" />
 		</options>
 	</property>
 	<!-- Widget List -->
 	<property name="widgetList" templateonly="true" requires="widgetStyle">
 		<options>
-			<include content="ListOptions" />
+			<option value="Label" label="$LOCALIZE[21899]" />
+			<option value="Banner Art" label="$LOCALIZE[31087]" />
 		</options>
 	</property>
 	<!-- InfoLine -->
@@ -187,7 +144,8 @@
 	<!-- FALLBACKS -->
 	<fallbacks>
 		<fallback property="widgetArt">
-			<include content="ArtFallbackRules" />
+			<when condition="widgetType=musicvideos | songs | albums | artists | favourite | addon | weather | system | custom | pvr">Square Poster</when>
+			<default>Poster</default>
 		</fallback>
 	</fallbacks>
 	<!-- BUTTONS -->
