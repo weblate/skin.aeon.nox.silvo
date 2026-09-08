@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2026-08-19 19:16+0000\n"
+"PO-Revision-Date: 2026-09-08 22:07+0000\n"
 "Last-Translator: wabisabi926 <wabisabi926@foxmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-nox-silvo/zh_Hans/>\n"
 "Language: zh_cn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 msgctxt "Addon Summary"
 msgid "Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V"
@@ -559,7 +559,7 @@ msgstr "调谐器："
 
 msgctxt "#31133"
 msgid "Unfocused Scrollbar"
-msgstr ""
+msgstr "非聚焦滚动条"
 
 msgctxt "#31134"
 msgid "Timeline view-type:"
@@ -595,7 +595,7 @@ msgstr "隐藏指南"
 
 msgctxt "#31142"
 msgid "Read only"
-msgstr ""
+msgstr "只读"
 
 msgctxt "#31143"
 msgid "Hide Recordings"
@@ -683,15 +683,15 @@ msgstr "启用此选项可在浏览影片库时显示影片集的实时背景。
 
 msgctxt "#31166"
 msgid "Click to add"
-msgstr ""
+msgstr "点击添加"
 
 msgctxt "#31167"
 msgid "Click to remove"
-msgstr ""
+msgstr "点击移除"
 
 msgctxt "#31168"
 msgid "Enable to make the submenu permanently visible. Default is hidden until pressing down."
-msgstr "启用使子菜单永久可见。默认为隐藏，直到按下。"
+msgstr "启用子菜单将始终显示。默认为隐藏，直到按”下键“。"
 
 msgctxt "#31169"
 msgid "This setting hides the Search icon on the home screen."
@@ -1999,7 +1999,7 @@ msgstr "为电影合集首选显示完整剧情"
 
 msgctxt "#31575"
 msgid "Random music video fanart"
-msgstr ""
+msgstr "随机音乐视频背景图"
 
 msgctxt "#31576"
 msgid "Reboot to Android"
